@@ -1,0 +1,62 @@
+---
+title: "Homework 1"
+author: "Koji Takagi"
+format: html
+editor: visual
+---
+
+## What do you think being a data scientist is about?
+
+Data science is about using data to find useful and meaningful insights.
+
+In my job, I work mostly with clinical trial data. I focus on:
+- Reading and cleaning raw data
+- Running statistical analyses based on a pre-written Statistical Analysis Plan (SAP)
+- Making clear tables and figures
+
+I don’t usually choose the methods, but I know how to apply them correctly.  
+I hope to grow in the future and be more involved in selecting the appropriate methods.
+
+## What differences/similarities do you see between data scientists and statisticians?
+
+- **Similarities:**
+  - Both use data to make decisions.
+  - Both rely on statistical models and programming tools.
+- **Differences:**
+  - Statisticians focus more on theory and study design.
+  - Data scientists often work more with coding, automation, and production environments.
+
+## How do you view yourself in relation to these two areas?
+
+Currently, I work as a **data analyst**.
+
+- I follow instructions from the SAP rather than designing the analysis myself.
+- I am confident in using tools like R and SAS to produce reliable results.
+- I care about accuracy, reproducibility, and clean code.
+- I want to grow step-by-step toward statistical thinking and method selection.
+
+---
+
+## R Code: Exploring a Density Object
+
+We will now create a density object based on the `Petal.Width` variable from the `iris` dataset.
+
+The object `y` stores the result of the `density()` function, which calculates a kernel density estimate of the values.
+
+Below, we check the **class**, **type**, and **structure** of the object `y`.
+
+```{r}
+#| echo: true
+
+y <- density(iris$Petal.Width)
+
+class(y)
+typeof(y)
+str(y)
+```
+
+```{r}
+#| echo: false
+
+plot(y)
+```
